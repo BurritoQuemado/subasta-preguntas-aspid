@@ -62,7 +62,7 @@ class Layout extends Component{
                       />
                     </Link>
                     <div className="-mr-2 flex items-center md:hidden">
-                      <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-principal p-2 text-black focus:outline-none focus:ring-2 focus:ring-black">
+                      <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-principal p-2 text-white focus:outline-none focus:ring-2 focus:ring-black">
                         <span className="sr-only">Open main menu</span>
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                       </Popover.Button>
@@ -73,7 +73,7 @@ class Layout extends Component{
                       <Link
                         key={item.name}
                         to={item.href}
-                        className="text-base font-medium text-black hover:text-gray-600"
+                        className="text-base font-medium text-white hover:text-gray-600"
                       >
                         {item.name}
                       </Link>
@@ -85,7 +85,7 @@ class Layout extends Component{
                           to={item.href}
                           target={item.target}
                           rel="nonreferrer noreferrer"
-                          className="text-base font-medium text-black hover:text-gray-600"
+                          className="text-base font-medium text-white hover:text-gray-600"
                         >
                           {item.name}
                         </Link>
@@ -99,17 +99,17 @@ class Layout extends Component{
                      <Link
                         to='/'
                         onClick={logout}
-                        className="inline-flex items-center rounded-md border border-transparent bg-principal px-4 py-2 text-base font-medium text-black"
+                        className="inline-flex items-center rounded-md border border-transparent bg-principal px-4 py-2 text-base font-medium text-white"
                       >
                      Salir
                    </Link>
                   : <>
-                    <Link to="/registro" className="text-base font-medium text-black">
+                    <Link to="/registro" className="text-base font-medium text-white">
                       Registrarse
                     </Link>
                     <Link
                       to="/login"
-                      className="inline-flex items-center rounded-md border border-transparent bg-principal px-4 py-2 text-base font-medium text-black"
+                      className="inline-flex items-center rounded-md border border-transparent bg-principal px-4 py-2 text-base font-medium text-white"
                     >
                       Ingresar
                     </Link>
@@ -154,7 +154,7 @@ class Layout extends Component{
                         <Link
                           key={item.name}
                           to={item.href}
-                          className="block rounded-md px-3 py-2 text-base font-medium text-black"
+                          className="block rounded-md px-3 py-2 text-base font-medium text-white"
                         >
                           {item.name}
                         </Link>
@@ -166,7 +166,7 @@ class Layout extends Component{
                             to={item.href}
                             target={item.target}
                             rel="nonreferrer noreferrer"
-                            className="block rounded-md px-3 py-2 text-base font-medium text-black"
+                            className="block rounded-md px-3 py-2 text-base font-medium text-white"
                           >
                             {item.name}
                           </Link>
@@ -187,7 +187,7 @@ class Layout extends Component{
                     <div className="mt-6 px-5">
                       <Link
                         to="/registro"
-                        className="block w-full rounded-md bg-principal py-3 px-4 text-center font-medium text-black shadow hover:from-teal-600 hover:to-cyan-700"
+                        className="block w-full rounded-md bg-principal py-3 px-4 text-center font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700"
                       >
                         Registrarse
                       </Link>

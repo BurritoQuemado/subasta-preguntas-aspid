@@ -29,7 +29,7 @@ function MainContent({logged, user_id}) {
                                     <div className="mt-10 flex items-center justify-center gap-x-6">
                                         <Link
                                         to="/registro"
-                                        className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
+                                        className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
                                         >
                                             Registrarse
                                         </Link>
@@ -59,13 +59,13 @@ function MainContent({logged, user_id}) {
                                     <div className="mt-10 grid grid-cols-1 items-center justify-center gap-6">
                                         <Link
                                         to={'/galeria'}
-                                        className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
+                                        className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
                                         >
                                             Galería
                                         </Link>
                                         <Link
                                         to={'/cartera-desc'}
-                                        className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
+                                        className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
                                         >
                                             Cartera Cryptomonedas
                                         </Link>

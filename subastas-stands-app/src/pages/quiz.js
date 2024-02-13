@@ -58,7 +58,7 @@ function QuizPage({ user_id}) {
                         </div>
                         <Link
                         to={'/cartera/'+user_id}
-                        className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
+                        className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
                         >
                             Ver cartera
                         </Link>

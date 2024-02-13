@@ -59,7 +59,7 @@
                             {
                                 answers.map((answer,index) =>{
                                     return (
-                                        <button className="justify-center text-black rounded-md bg-principal border border-principal mx-10 my-2 py-1" key={index} onClick={() => chooseAnswer(index + 1)}> { answer } </button>
+                                        <button className="justify-center text-white rounded-md bg-principal border border-principal mx-10 my-2 py-1" key={index} onClick={() => chooseAnswer(index + 1)}> { answer } </button>
                                     )
 
                                 } 
@@ -79,7 +79,7 @@
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <Link
                         to={'/cartera-desc'}
-                        className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
+                        className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
                         >
                             Regresar
                         </Link>
