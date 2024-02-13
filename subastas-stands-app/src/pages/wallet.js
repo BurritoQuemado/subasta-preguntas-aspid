@@ -12,7 +12,7 @@ function WalletPage() {
     useEffect(() => {
         const config = {
             method: 'GET',
-            url: "http://localhost:3000/getUserData/"+StoredUserId,
+            url: "https://subasta-preguntas-aspid-e16826bf4816.herokuapp.com/getUserData/"+StoredUserId,
             headers: { 
               'Content-Type': 'application/json',
               "Access-Control-Allow-Origin": "*"

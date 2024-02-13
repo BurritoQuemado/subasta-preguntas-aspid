@@ -9,7 +9,7 @@ function GalleryPage(){
     useEffect(() => {
         const config = {
             method: 'GET',
-            url: "http://localhost:3000/getUsersInfo/",
+            url: "https://subasta-preguntas-aspid-e16826bf4816.herokuapp.com/getUsersInfo/",
             headers: { 
               'Content-Type': 'application/json',
               "Access-Control-Allow-Origin": "*"

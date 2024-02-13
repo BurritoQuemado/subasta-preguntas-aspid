@@ -24,7 +24,7 @@
         }
         useEffect(() => {
             if(showResult){
-                fetch('http://localhost:3000/answerQuiz', {
+                fetch('https://subasta-preguntas-aspid-e16826bf4816.herokuapp.com/answerQuiz', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
