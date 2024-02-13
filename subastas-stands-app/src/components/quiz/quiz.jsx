@@ -74,7 +74,7 @@
                         <h2 className="font-bold">Su resultado es: {resultQuestions}/{questions.length}</h2>
                     </div>
                     <div className="text-center">
-                        <p>Obtuvo <b>{result}</b> Cryptomonedas</p>
+                        <p>Obtuvo <b>{result.toLocaleString()}</b> Cryptomonedas</p>
                     </div>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <Link
