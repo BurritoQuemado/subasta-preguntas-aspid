@@ -9,8 +9,8 @@ import JessicaDurrant from './assets/images/art/JessicaDurrant.webp';
 import MartinAnsin from './assets/images/art/MartinAnsin.webp';
 import MartinAnsin2 from './assets/images/art/MartinAnsin2.webp';
 
-const URL_GROUP_1 = "https://8th.io/ncydd";
-const URL_GROUP_2 = "https://8th.io/ncydd";
+const URL_GROUP_1 = "https://8th.io/8qkcj";
+const URL_GROUP_2 = "https://8th.io/ykcky";
 
 const art_list = [
     {
@@ -35,13 +35,13 @@ const art_list = [
       "id": 4,
       "title": "FranesMacDonaldsIMG",
       "img": FranesMacDonaldsIMG,
-      "href": URL_GROUP_1
+      "href": URL_GROUP_2
     },
     {
       "id": 5,
       "title": "FranesMacDonalds2IMG",
       "img": FranesMacDonalds2IMG,
-      "href": URL_GROUP_1
+      "href": URL_GROUP_2
     },
     {
       "id": 6,
@@ -59,13 +59,13 @@ const art_list = [
       "id": 8,
       "title": "JessicaDurrant",
       "img": JessicaDurrant,
-      "href": URL_GROUP_2
+      "href": URL_GROUP_1
     },
     {
       "id": 9,
       "title": "MartinAnsin",
       "img": MartinAnsin,
-      "href": URL_GROUP_2
+      "href": URL_GROUP_1
     },
     {
       "id": 10,

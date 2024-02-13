@@ -40,7 +40,7 @@
         return (
             <>
                 { !showResult ?
-                <div className="bg-white px-4 py-2 ">
+                <div className="bg-white px-4 py-2 mx-auto max-w-3xl px-6 lg:px-8 lg:py-6">
                     <div className="">
                         <div className="grid grid-cols-2">
                             <div className="text-left">

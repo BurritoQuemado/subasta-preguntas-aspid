@@ -29,9 +29,9 @@ function QuizPage({ user_id}) {
     
     return (
         <>
-            <div className="px-6 py-4 sm:px-6 sm:py-32 lg:px-8">
+            <div className="px-6 py-4 sm:px-6 sm:py-32 lg:px-8 lg:py-2">
                 <div className="mx-auto max-w-2xl text-center">
-                    <div className="px-6 py-6 sm:px-6 sm:py-32 lg:px-8">
+                    <div className="px-6 py-6 sm:px-6 sm:py-32 lg:px-8 lg:py-2">
                         <div className="mx-auto max-w-2xl text-center">
                             <p className="mx-auto mt-2 max-w-xl text-lg text-justify leading-6 text-gray-600">
                                 Para conocer las preguntas y respuestas preste atención al presentador y a la pantalla, ya que ahí
@@ -47,7 +47,7 @@ function QuizPage({ user_id}) {
             {
                 quiz_try ? <Quiz user_id={user_id}/> :
                 <>
-                <div className="px-6 py-4 sm:px-6 sm:py-32 lg:px-8">
+                <div className="px-6 py-4 sm:px-6 sm:py-32 lg:px-8 lg:py-6">
                     <div className="mx-auto max-w-2xl text-center">
                         <div className="px-6 py-6 sm:px-6 sm:py-32 lg:px-8">
                             <div className="mx-auto max-w-2xl text-center">

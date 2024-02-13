@@ -46,7 +46,7 @@ class Layout extends Component{
       <div className="bg-white">
         <div className="relative overflow-hidden">
           <Popover as="header" className="relative">
-            <div className="bg-gray-300 pt-6 pb-0">
+            <div className="bg-white pt-6 pb-0">
               <nav
                 className="relative mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6"
                 aria-label="Global"
@@ -56,7 +56,7 @@ class Layout extends Component{
                     <Link to="/">
                       <span className="sr-only">Wallet Cryptocoins</span>
                       <img
-                        className="h-10 w-auto lg:h-16"
+                        className="h-12 w-auto lg:h-16"
                         src={Logo}
                         alt="logo-viajespalacio"
                       />
@@ -73,7 +73,7 @@ class Layout extends Component{
                       <Link
                         key={item.name}
                         to={item.href}
-                        className="text-base font-medium text-white hover:text-gray-600"
+                        className="text-base font-medium text-black hover:text-gray-600"
                       >
                         {item.name}
                       </Link>
@@ -85,7 +85,7 @@ class Layout extends Component{
                           to={item.href}
                           target={item.target}
                           rel="nonreferrer noreferrer"
-                          className="text-base font-medium text-white hover:text-gray-600"
+                          className="text-base font-medium text-black hover:text-gray-600"
                         >
                           {item.name}
                         </Link>
@@ -154,7 +154,7 @@ class Layout extends Component{
                         <Link
                           key={item.name}
                           to={item.href}
-                          className="block rounded-md px-3 py-2 text-base font-medium text-white"
+                          className="block rounded-md px-3 py-2 text-base font-medium text-black"
                         >
                           {item.name}
                         </Link>
@@ -166,7 +166,7 @@ class Layout extends Component{
                             to={item.href}
                             target={item.target}
                             rel="nonreferrer noreferrer"
-                            className="block rounded-md px-3 py-2 text-base font-medium text-white"
+                            className="block rounded-md px-3 py-2 text-base font-medium text-black"
                           >
                             {item.name}
                           </Link>
@@ -178,7 +178,7 @@ class Layout extends Component{
                       <Link
                         to='/'
                         onClick={logout}
-                        className="block w-full rounded-md bg-black py-3 px-4 text-center font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700"
+                        className="block w-full rounded-md bg-principal py-3 px-4 text-center font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700"
                       >
                         Salir
                       </Link>
@@ -218,7 +218,7 @@ class Layout extends Component{
               <div className="xl:grid xl:grid-cols-3 xl:gap-8 justify-center">
                 <div className="py-4 sm:mx-auto sm:w-full sm:max-w-md">
                     <img
-                        className="mx-auto h-20 w-auto"
+                        className="mx-auto h-36 w-auto"
                         src={ Logo }
                         alt="logo_viajespalacio"
                     />
