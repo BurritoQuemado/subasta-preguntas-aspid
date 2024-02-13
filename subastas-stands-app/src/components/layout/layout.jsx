@@ -32,7 +32,7 @@ const footerNavigation = {
 
   legal: [
     { name: 'Aviso de Privacidad', 
-      href: 'https://www.viajespalacio.com.mx/aviso-de-privacidad.html' 
+      href: 'https://www.premiosaspid.mx/legal/avisolegal' 
     },
   ],
 }
