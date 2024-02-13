@@ -28,7 +28,7 @@ function RegisterForm ({ login }) {
 
     useEffect(() => {
         if(Object.keys(formErrors).length === 0 && isSubmit){
-            fetch('https://subasta-viajespalacio-24f6392aae86.herokuapp.com/register', {
+            fetch('http://localhost:3000/register', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({

@@ -5,14 +5,17 @@
     const Quiz = ({user_id}) => {
         const [currentQuestion, setCurrentQuestion] = useState(0);
         const [result, setResult] = useState(0);
+        const [resultQuestions, setResultQuestions] = useState(0);
         const [showResult, setShowResult] = useState(false);
         
-        const { question, correct_answer } = questions[currentQuestion];
+        const { question, answers, correct_answer, value } = questions[currentQuestion];
         
         const chooseAnswer = (option) => {
+            console.log(result)
             if(currentQuestion < questions.length - 1) {
                 if (option === correct_answer) {
-                    setResult(result + 1);
+                    setResultQuestions(resultQuestions + 1);
+                    setResult(result + value);
                 }
                 setCurrentQuestion(currentQuestion + 1);
             } else {
@@ -21,12 +24,12 @@
         }
         useEffect(() => {
             if(showResult){
-                fetch('https://subasta-viajespalacio-24f6392aae86.herokuapp.com/answerQuiz', {
+                fetch('http://localhost:3000/answerQuiz', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
                         user_id: user_id,
-                        currency: result * 1000
+                        currency: result
                     })
                 })
                 .then(response => response.json())
@@ -41,7 +44,7 @@
                     <div className="">
                         <div className="grid grid-cols-2">
                             <div className="text-left">
-                                <span >Puntuación: {result * 1000}</span>
+                                <span >Puntuación: {result}</span>
                             </div>
                             <div className="text-right">
                                 <span >Pregunta: {currentQuestion + 1}</span>
@@ -53,20 +56,25 @@
                                 <h2 className="text-center">{question}</h2>
                             </div>
                             <div className="grid grid-rows-4 gap-2">
-                                <button className="justify-center text-black rounded-md bg-principal border border-principal mx-10 my-2 py-1" onClick={() => chooseAnswer(1)}>Opción 1</button>
-                                <button className="justify-center text-black rounded-md bg-principal border border-principal mx-10 my-2 py-1" onClick={() => chooseAnswer(2)}>Opción 2</button>
-                                <button className="justify-center text-black rounded-md bg-principal border border-principal mx-10 my-2 py-1" onClick={() => chooseAnswer(3)}>Opción 3</button>
-                                <button className="justify-center text-black rounded-md bg-principal border border-principal mx-10 my-2 py-1" onClick={() => chooseAnswer(4)}>Opción 4</button>
+                            {
+                                answers.map((answer,index) =>{
+                                    return (
+                                        <button className="justify-center text-black rounded-md bg-principal border border-principal mx-10 my-2 py-1" key={index} onClick={() => chooseAnswer(index + 1)}> { answer } </button>
+                                    )
+
+                                } 
+                                )
+                            } 
                             </div>
                         </div>
                     </div>
                 </div> 
                 : <div className="bg-white px-4 py-5">
                     <div className="text-center">
-                        <h2 className="font-bold">Su resultado es: {result}/{questions.length}</h2>
+                        <h2 className="font-bold">Su resultado es: {resultQuestions}/{questions.length}</h2>
                     </div>
                     <div className="text-center">
-                        <p>Obtuvo <b>{result * 1000 }</b> Cryptomonedas</p>
+                        <p>Obtuvo <b>{result}</b> Cryptomonedas</p>
                     </div>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <Link

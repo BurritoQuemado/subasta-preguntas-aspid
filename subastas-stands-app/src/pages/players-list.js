@@ -9,7 +9,7 @@ function GalleryPage(){
     useEffect(() => {
         const config = {
             method: 'GET',
-            url: "https://subasta-viajespalacio-24f6392aae86.herokuapp.com/getUsersInfo/",
+            url: "http://localhost:3000/getUsersInfo/",
             headers: { 
               'Content-Type': 'application/json',
               "Access-Control-Allow-Origin": "*"

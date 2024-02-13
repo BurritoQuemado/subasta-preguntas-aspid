@@ -12,7 +12,7 @@ function WalletPage() {
     useEffect(() => {
         const config = {
             method: 'GET',
-            url: "https://subasta-viajespalacio-24f6392aae86.herokuapp.com/getUserData/"+StoredUserId,
+            url: "http://localhost:3000/getUserData/"+StoredUserId,
             headers: { 
               'Content-Type': 'application/json',
               "Access-Control-Allow-Origin": "*"

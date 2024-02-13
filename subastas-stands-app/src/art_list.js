@@ -1,124 +1,77 @@
-import Bastidor04Img from './assets/images/art/bastidor04.jpg';
-import BichiImg from './assets/images/art/bichi.jpg';
-import BorealAuroraImg from './assets/images/art/borealaurora.jpg';
-import CDisneyImg from './assets/images/art/cDisney.jpg';
-import CeroFourImg from './assets/images/art/cerofour.jpg';
-import Couple2Img from './assets/images/art/couple2.jpg';
-import DisneyImg from './assets/images/art/disney.jpg';
-import ItalyNightImg from './assets/images/art/italynight.jpg';
-import JamaicaNoProblemImg from './assets/images/art/jamaicanoproblem.jpg';
-import NightSkylineImg from './assets/images/art/nightskyline.jpg';
-import NYImg from './assets/images/art/ny.jpg';
-import ParisImg from './assets/images/art/paris.jpg';
-import PeppyPlaneImg from './assets/images/art/peppyplane.jpg';
-import PlaneHostessImg from './assets/images/art/planehostess.jpg';
-import PlaneLandingImg from './assets/images/art/planelanding.jpg';
-import ShipImg from './assets/images/art/ship.jpg';
-import StarryNightImg from './assets/images/art/starrynight.jpg';
+import AlisonBechdelIMG from './assets/images/art/AlisonBechdel.webp';
+import AustinBriggsIMG from './assets/images/art/AustinBriggs.webp';
+import DavidChoesIMG from './assets/images/art/DavidChoe.webp';
+import FranesMacDonaldsIMG from './assets/images/art/FranesMacDonalds.webp';
+import FranesMacDonalds2IMG from './assets/images/art/FranesMacDonalds2.webp';
+import JackHughesIMG from './assets/images/art/JackHughes.webp';
+import JackHughes2IMG from './assets/images/art/JackHughes2.webp';
+import JessicaDurrant from './assets/images/art/JessicaDurrant.webp';
+import MartinAnsin from './assets/images/art/MartinAnsin.webp';
+import MartinAnsin2 from './assets/images/art/MartinAnsin2.webp';
 
+const URL_GROUP_1 = "https://8th.io/ncydd";
+const URL_GROUP_2 = "https://8th.io/ncydd";
 
 const art_list = [
     {
       "id": 1,
-      "title": "Bastidor04Img",
-      "img": Bastidor04Img,
-      "href": "https://8th.io/ncydd"
+      "title": "AlisonBechdelIMG",
+      "img": AlisonBechdelIMG,
+      "href": URL_GROUP_1
     },
     {
       "id": 2,
-      "title": "BichiImg",
-      "img": BichiImg,
-      "href": "https://8th.io/ncydd"
+      "title": "AustinBriggsIMG",
+      "img": AustinBriggsIMG,
+      "href": URL_GROUP_1
     },
     {
       "id": 3,
-      "title": "BorealAuroraImg",
-      "img": BorealAuroraImg,
-      "href": "https://8th.io/ncydd"
+      "title": "DavidChoesIMG",
+      "img": DavidChoesIMG,
+      "href": URL_GROUP_1
     },
     {
       "id": 4,
-      "title": "CDisneyImg",
-      "img": CDisneyImg,
-      "href": "https://8th.io/8pagh"
+      "title": "FranesMacDonaldsIMG",
+      "img": FranesMacDonaldsIMG,
+      "href": URL_GROUP_1
     },
     {
       "id": 5,
-      "title": "CeroFourImg",
-      "img": CeroFourImg,
-      "href": "https://8th.io/ncydd"
+      "title": "FranesMacDonalds2IMG",
+      "img": FranesMacDonalds2IMG,
+      "href": URL_GROUP_1
     },
     {
       "id": 6,
-      "title": "Couple2Img",
-      "img": Couple2Img,
-      "href": "https://8th.io/8pagh"
+      "title": "JackHughesIMG",
+      "img": JackHughesIMG,
+      "href": URL_GROUP_2
     },
     {
       "id": 7,
-      "title": "DisneyImg",
-      "img": DisneyImg,
-      "href": "https://8th.io/8pagh"
+      "title": "JackHughes2IMG",
+      "img": JackHughes2IMG,
+      "href": URL_GROUP_2
     },
     {
       "id": 8,
-      "title": "ItalyNightImg",
-      "img": ItalyNightImg,
-      "href": "https://8th.io/8pagh"
+      "title": "JessicaDurrant",
+      "img": JessicaDurrant,
+      "href": URL_GROUP_2
     },
     {
       "id": 9,
-      "title": "JamaicaNoProblemImg",
-      "img": JamaicaNoProblemImg,
-      "href": "https://8th.io/8pagh"
+      "title": "MartinAnsin",
+      "img": MartinAnsin,
+      "href": URL_GROUP_2
     },
     {
       "id": 10,
-      "title": "NightSkylineImg",
-      "img": NightSkylineImg,
-      "href": "https://8th.io/4a293"
-    },
-    {
-      "id": 11,
-      "title": "NYImg",
-      "img": NYImg,
-      "href": "https://8th.io/4a293"
-    },
-    {
-      "id": 12,
-      "title": "ParisImg",
-      "img": ParisImg,
-      "href": "https://8th.io/4a293"
-    },
-    {
-      "id": 13,
-      "title": "PeppyPlaneImg",
-      "img": PeppyPlaneImg,
-      "href": "https://8th.io/4a293"
-    },
-    {
-      "id": 14,
-      "title": "PlaneHostessImg",
-      "img": PlaneHostessImg,
-      "href": "https://8th.io/4a293"
-    },
-    {
-      "id": 15,
-      "title": "PlaneLandingImg",
-      "img": PlaneLandingImg,
-      "href": "https://8th.io/wvxzu"
-    },
-    {
-      "id": 16,
-      "title": "ShipImg",
-      "img": ShipImg,
-      "href": "https://8th.io/wvxzu"
-    },
-    {
-      "id": 17,
-      "title": "StarryNightImg",
-      "img": StarryNightImg,
-      "href": "https://8th.io/wvxzu"
+      "title": "MartinAnsin2",
+      "img": MartinAnsin2,
+      "href": URL_GROUP_2
     }
   ]
   

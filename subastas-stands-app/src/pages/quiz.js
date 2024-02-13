@@ -14,7 +14,7 @@ function QuizPage({ user_id}) {
     useEffect(() => {
         const config = {
             method: 'GET',
-            url: "https://subasta-viajespalacio-24f6392aae86.herokuapp.com/getUsersQuizTry/"+STORED_USER,
+            url: "http://localhost:3000/getUsersQuizTry/"+STORED_USER,
             headers: { 
               'Content-Type': 'application/json',
               "Access-Control-Allow-Origin": "*"
