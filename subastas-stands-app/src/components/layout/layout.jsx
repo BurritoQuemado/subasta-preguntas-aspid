@@ -59,7 +59,7 @@ class Layout extends Component{
                       <img
                         className="h-20 w-auto lg:h-16"
                         src={Logo2}
-                        alt="logo-viajespalacio"
+                        alt="logo-28wh"
                       />
                     </Link>
                     <div className="-mr-2 flex items-center md:hidden">
