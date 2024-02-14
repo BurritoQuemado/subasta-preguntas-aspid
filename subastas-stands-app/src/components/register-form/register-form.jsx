@@ -233,7 +233,7 @@ function RegisterForm ({ login }) {
                                     Teléfono
                                 </label>
                                 <input
-                                    type="text"
+                                    type="tel"
                                     name="phone"
                                     id="phone"
                                     autoComplete="tel"
