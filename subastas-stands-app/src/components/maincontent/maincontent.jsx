@@ -48,13 +48,16 @@ function MainContent({logged, user_id}) {
                             <div className="px-6 py-4 sm:px-6 sm:py-32 lg:px-8">
                                 <div className="mx-auto max-w-2xl text-center">
                                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                                        Esta es su guía de arte interactivo Viajes Palacio.
+                                        Muchas gracias por ser parte del evento de lanzamiento de 28 Women’s Health.
                                     </h2>
+                                    <p className="mx-auto mt-6 max-w-xl text-lg leading-6 text-gray-600 text-justify">
+                                        Participa en una sencilla dinámica respondiendo una trivia sobre mujeres famosas  que te permitirá canjearlo por una  de las obras  de nuestra colección de arte  de lanzamiento.
+                                    </p>
                                     <p className="mx-auto mt-6 max-w-xl text-lg leading-6 text-gray-600 text-justify">
                                         <b>Galería</b> es un recorrido por las distintas obras que puede encontrar en nuestra galería.
                                     </p>
                                     <p className="mx-auto mt-6 max-w-xl text-lg leading-6 text-gray-600 text-justify">
-                                        <b>Cartera</b> Es una cartera de monedas digitales que podrá adquirir contestando las preguntas que se presentaran después de la premiación y usarlas para subastar por alguna de las obras.
+                                        <b>Cartera</b> Es una cartera de monedas digitales que podrá adquirir contestando las preguntas del cuestionario y usarlas el día del evento, para subastar por alguna de las obras.
                                     </p>
                                     <div className="mt-10 grid grid-cols-1 items-center justify-center gap-6">
                                         <Link
