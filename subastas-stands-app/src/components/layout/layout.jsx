@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { Popover, Transition } from '@headlessui/react'
-import Logo from '../../assets/images/logo.png'
+import Logo from '../../assets/images/logo.jpg'
+import Logo2 from '../../assets/images/logo.png'
 import {
   Bars3Icon,
   XMarkIcon,
@@ -46,7 +47,7 @@ class Layout extends Component{
       <div className="bg-white">
         <div className="relative overflow-hidden">
           <Popover as="header" className="relative">
-            <div className="bg-white pt-6 pb-0">
+            <div className="bg-gray-500 pt-6 pb-0">
               <nav
                 className="relative mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6"
                 aria-label="Global"
@@ -56,8 +57,8 @@ class Layout extends Component{
                     <Link to="/">
                       <span className="sr-only">Wallet Cryptocoins</span>
                       <img
-                        className="h-12 w-auto lg:h-16"
-                        src={Logo}
+                        className="h-20 w-auto lg:h-16"
+                        src={Logo2}
                         alt="logo-viajespalacio"
                       />
                     </Link>

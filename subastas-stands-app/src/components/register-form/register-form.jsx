@@ -13,8 +13,10 @@ function RegisterForm ({ login }) {
 
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
+    const [loading, setLoading] = useState(false);
     const [isSubmit, setIsSubmit] = useState(false);
-
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
     const handleChange = (e) =>{
         const { name, value } = e.target;
         setFormValues({...formValues, [name]: value});
@@ -22,6 +24,7 @@ function RegisterForm ({ login }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setLoading(true);
         setFormErrors(validate(formValues));
         setIsSubmit(true);
     };
@@ -38,10 +41,22 @@ function RegisterForm ({ login }) {
                     password: formValues.password
                 })
             })
-            .then(response => response.json())
-            .then(login())
+            .then(response =>{
+                if(response.status === 200){
+                    setSuccess(true);
+                }
+                return response
+            } )
+            .then(res => {
+                if(success){
+                    login()
+                } else {
+                    setLoading(false);
+                    setError(true);
+                }
+            })
         }
-    }, [formErrors, formValues.name, formValues.password, formValues.email, formValues.confirm_password, formValues.lname, login, isSubmit])
+    }, [formErrors, formValues.name, formValues.password, formValues.email, formValues.confirm_password, formValues.lname, login, isSubmit,success,error])
 
     const validate = (values) => {
         const errors = {};
@@ -85,6 +100,15 @@ function RegisterForm ({ login }) {
         <>
             <div className="overflow-hidden shadow sm:rounded-md">
                 <form>
+                {
+                    error ? 
+                    <div>
+                    <label className="block text-sm font-medium text-red-600">
+                        Hubo un problema en el registro, intente de nuevo.
+                    </label>
+                    </div>
+                    : null
+                }
                     <div className="bg-white px-4 py-5 sm:p-6">
                         <div className="grid grid-cols-6 gap-6">
                             <div className="col-span-6 sm:col-span-3">
@@ -176,9 +200,31 @@ function RegisterForm ({ login }) {
                 <div className="bg-gray-50 px-4 py-3 text-center sm:px-6">
                     <button
                         onClick={handleSubmit}
+                        disabled={loading}
                         className="inline-flex justify-center rounded-md border border-transparent bg-principal py-2 px-4 text-sm lg:text-2xl lg:font-semibold font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-principal focus:ring-offset-2"
                         >
-                        Registrarse
+                        {loading ? (
+                            <svg
+                                className="animate-spin h-5 w-5"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <circle
+                                className="opacity-25"
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                                ></circle>
+                                <path
+                                className="opacity-75"
+                                fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                ></path>
+                            </svg>
+                            ) : "Registrarse"}
                     </button>
                 </div>
             </div>
