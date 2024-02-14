@@ -69,7 +69,7 @@
                         </div>
                     </div>
                 </div> 
-                : <div className="bg-white px-4 py-5">
+                : <div className="bg-white px-4 py-5 lg:py-2">
                     <div className="text-center">
                         <h2 className="font-bold">Su resultado es: {resultQuestions}/{questions.length}</h2>
                     </div>
