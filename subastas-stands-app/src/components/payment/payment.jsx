@@ -29,13 +29,14 @@ function Payment({ name, balance, user_id }) {
     useEffect(() => {
         if(Object.keys(formErrors).length === 0 && isSubmit){
             setLoading(true);
-            setCurrency(parseInt(formValues.payment))
+            setCurrency(parseInt(formValues.payment) * -1)
+            console.log("payment",currency)
             fetch('https://subasta-preguntas-aspid-e16826bf4816.herokuapp.com/updateBalance', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
                     user_id: user_id,
-                    currency: currency * -1,
+                    currency: currency,
                 })
             })
             .then(response =>{
@@ -47,7 +48,7 @@ function Payment({ name, balance, user_id }) {
                 return response
             } )
         }
-    }, [formErrors, formValues, isSubmit, success, error, user_id, currency])
+    }, [formErrors, formValues, isSubmit, success, error, user_id])
 
     const validate = (values) => {
         const errors = {};

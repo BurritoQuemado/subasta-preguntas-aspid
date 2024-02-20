@@ -26,7 +26,7 @@ function PaymentPage() {
             setUserBalance(parseInt(res.data.balance))
         })
 
-    },[user_id])
+    },[])
 
 
     return (

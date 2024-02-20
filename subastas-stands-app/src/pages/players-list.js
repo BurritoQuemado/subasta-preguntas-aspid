@@ -21,7 +21,7 @@ function GalleryPage(){
             SetPlayersList(res.data)
         })
 
-    },[PlayersListData])
+    },[])
 
     return (
         <>
