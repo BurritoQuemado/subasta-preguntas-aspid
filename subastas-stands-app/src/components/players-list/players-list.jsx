@@ -3,7 +3,6 @@ import React from "react";
 
 function PlayersList ({ players_list }) {
 
-
     return (
         <>
             <div className="px-4 sm:px-6 lg:px-8">
@@ -28,6 +27,15 @@ function PlayersList ({ players_list }) {
                             Correo
                         </th>
                         <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                            Telefono
+                        </th>
+                        <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                            Empresa
+                        </th>
+                        <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                            Cargo
+                        </th>
+                        <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                             Balance
                         </th>
                         <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
@@ -42,7 +50,10 @@ function PlayersList ({ players_list }) {
                             {person.name} {person.lastname}
                             </td>
                             <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.email}</td>
-                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.balance}</td>
+                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.phone}</td>
+                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.work_place}</td>
+                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.charge}</td>
+                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{ person.balance }</td>
                             {
                                 person.quiz_try ? <td className="whitespace-nowrap px-3 py-4 text-sm text-red-500"> Sin contestar </td> : <td className="whitespace-nowrap px-3 py-4 text-sm text-green-500"> Contestado </td>
                             }
