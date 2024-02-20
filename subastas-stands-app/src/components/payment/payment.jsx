@@ -47,7 +47,7 @@ function Payment({ name, balance, user_id }) {
                 return response
             } )
         }
-    }, [formErrors, formValues, isSubmit, success, error, user_id])
+    }, [formErrors, formValues, isSubmit, success, error, user_id, currency])
 
     const validate = (values) => {
         const errors = {};
