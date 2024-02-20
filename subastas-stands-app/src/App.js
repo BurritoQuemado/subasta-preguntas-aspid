@@ -8,7 +8,8 @@ import {
   WalletDescPage,
   GalleryPage,
   QuizPage,
-  PlayersListPage
+  PlayersListPage,
+  PaymentPage
 } from './pages'
 import { Layout } from './components';
 function App () {
@@ -44,12 +45,14 @@ function App () {
       <Routes>
         <Route path="/" element={ <Home logged_in={logged} user_id={user_id} /> } />
         <Route path="/cartera/:user_id" element={ <WalletPage /> } />
+        <Route path="/cobrar/:user_id" element={ <PaymentPage /> } />
         <Route path='/login' element={ <LoginPage setLoggedIn={setLoggedIn} /> } />
         <Route path='/registro' element={ <RegisterPage /> } />
         <Route path='/cartera-desc' element={ <WalletDescPage user_id={user_id} />} />
         <Route path='/galeria' element={ <GalleryPage /> } />
         <Route path='/cuestionario' element={ <QuizPage user_id={user_id} /> } />
         <Route path='/jugadores' element={ <PlayersListPage /> } />
+
       </Routes>
     </Layout>
   );

@@ -8,3 +8,4 @@ export { default as WalletDesc } from './wallet-desc/wallet-desc';
 export { default as GalleryList } from './gallery-list/gallery-list';
 export { default as Quiz } from './quiz/quiz';
 export { default as PlayersList } from './players-list/players-list';
+export { default as PaymentComponent } from './payment/payment';

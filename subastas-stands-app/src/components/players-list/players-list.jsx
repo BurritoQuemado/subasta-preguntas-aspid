@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 function PlayersList ({ players_list }) {
@@ -36,7 +37,7 @@ function PlayersList ({ players_list }) {
                             Cargo
                         </th>
                         <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                            Balance
+                            Monedas
                         </th>
                         <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                             Cuestionario
@@ -53,10 +54,18 @@ function PlayersList ({ players_list }) {
                             <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.phone}</td>
                             <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.work_place}</td>
                             <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.charge}</td>
-                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{ person.balance }</td>
+                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{ parseInt(person.balance).toLocaleString() }</td>
                             {
                                 person.quiz_try ? <td className="whitespace-nowrap px-3 py-4 text-sm text-red-500"> Sin contestar </td> : <td className="whitespace-nowrap px-3 py-4 text-sm text-green-500"> Contestado </td>
                             }
+                            <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                <Link
+                                    to={"/cobrar/"+person.id}
+                                    className="block w-full rounded-md bg-amber-500 py-3 px-4 text-center font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700"
+                                >
+                                    Cobrar
+                                </Link>
+                            </td>
                         </tr>
                         ))}
                     </tbody>
