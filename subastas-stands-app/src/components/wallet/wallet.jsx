@@ -5,7 +5,7 @@ import {
     Balance
 } from "../"
 
-function Wallet({ name, balance, history, user_id, valid_codes}){
+function Wallet({ name, balance}){
     return (
         <>
             <div className="bg-white py-10 lg:py-24 sm:py-32">
