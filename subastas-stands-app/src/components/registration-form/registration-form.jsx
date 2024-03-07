@@ -21,7 +21,9 @@ function RegistrationForm () {
         telephone: '',
         fax: '',
         mobile: '',
-        email: ''
+        email: '',
+        other_topics: '',
+        found_about: ''
     }
 
     const [formValues, setFormValues] = useState(initialValues);
@@ -40,6 +42,7 @@ function RegistrationForm () {
         e.preventDefault();
         setFormErrors(validate(formValues));
         setIsSubmit(true);
+        console.log(formValues);
     };
 
     useEffect(() => {
@@ -66,7 +69,9 @@ function RegistrationForm () {
                     telephone: formValues.telephone,
                     fax: formValues.fax,
                     mobile: formValues.mobile,
-                    email: formValues.email
+                    email: formValues.email,
+                    other_topics: formValues.other_topics,
+                    found_about: formValues.found_about
                 })
             })
             .then(response =>{
@@ -506,7 +511,101 @@ function RegistrationForm () {
                                     {formErrors.email}
                                 </label>
                             </div>
-    
+                            <h2 className=" cols-span-6 text-base font-semibold leading-7 text-gray-900">Próximos talleres en seminarios</h2>
+                            <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-600">
+                                Deseando mantener siempre programas de actualidad e interés, por favor indiquenos que temas desea que se tomen en cuenta para futuros seminarios.
+                            </p>
+                            <div className="lg:col-span-3">
+                                <label htmlFor="other_topics" className="block text-sm font-medium text-gray-700">
+                                    Otros seminarios
+                                </label>
+                                <input
+                                    type="text"
+                                    name="other_topics"
+                                    id="other_topics"
+                                    onChange={handleChange}
+                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-principal focus:ring-principal sm:text-sm"
+                                />
+                                <label htmlFor="other_topics" className="block text-sm font-medium text-red-600">
+                                    {formErrors.other_topics}
+                                </label>
+                            </div>
+                            <fieldset name="found_about" onChange={handleChange}>
+                                <div className="mt-6 space-y-6">
+                                <div className="flex items-center gap-x-3">
+                                    <input
+                                    id="push-direct-email"
+                                    name="found_about"
+                                    type="radio"
+                                    value='direct-email'
+                                    className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
+                                    />
+                                    <label htmlFor="push-direct-email" className="block text-sm font-medium leading-6 text-gray-900">
+                                        Correo Directo
+                                    </label>
+                                </div>
+                                <div className="flex items-center gap-x-3">
+                                    <input
+                                    id="push-magazine"
+                                    name="found_about"
+                                    value='magazine'
+                                    type="radio"
+                                    className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
+                                    />
+                                    <label htmlFor="push-magazine" className="block text-sm font-medium leading-6 text-gray-900">
+                                        Revista
+                                    </label>
+                                </div>
+                                <div className="flex items-center gap-x-3">
+                                    <input
+                                    id="push-website"
+                                    name="found_about"
+                                    value='website'
+                                    type="radio"
+                                    className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
+                                    />
+                                    <label htmlFor="push-website" className="block text-sm font-medium leading-6 text-gray-900">
+                                        Sitio Web
+                                    </label>
+                                </div>
+                                <div className="flex items-center gap-x-3">
+                                    <input
+                                    id="push-mailing"
+                                    name="found_about"
+                                    value='mailing'
+                                    type="radio"
+                                    className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
+                                    />
+                                    <label htmlFor="push-mailing" className="block text-sm font-medium leading-6 text-gray-900">
+                                        Comunicados vía e-mail
+                                    </label>
+                                </div>
+                                <div className="flex items-center gap-x-3">
+                                    <input
+                                    id="push-press"
+                                    name="found_about"
+                                    type="radio"
+                                    value='press'
+                                    className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
+                                    />
+                                    <label htmlFor="push-press" className="block text-sm font-medium leading-6 text-gray-900">
+                                        Prensa
+                                    </label>
+                                </div>
+                                <div className="flex items-center gap-x-3">
+                                    <input
+                                    id="push-other"
+                                    name="found_about"
+                                    type="radio"
+                                    value='other'
+                                    className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
+                                    />
+                                    <label htmlFor="push-other" className="block text-sm font-medium leading-6 text-gray-900">
+                                        Otro
+                                    </label>
+                                </div>
+                                </div>
+                            </fieldset>
                         </div>
                     </div>
                     {
