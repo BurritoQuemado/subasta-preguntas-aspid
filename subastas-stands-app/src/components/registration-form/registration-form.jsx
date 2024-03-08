@@ -23,7 +23,12 @@ function RegistrationForm () {
         mobile: '',
         email: '',
         other_topics: '',
-        found_about: ''
+        direct_email: false,
+        magazine: false, 
+        web: false,
+        mailing: false,
+        press: false,
+        other: false
     }
 
     const [formValues, setFormValues] = useState(initialValues);
@@ -48,7 +53,7 @@ function RegistrationForm () {
     useEffect(() => {
         if(Object.keys(formErrors).length === 0 && isSubmit){
             setLoading(true);
-            fetch('https://subasta-preguntas-aspid-e16826bf4816.herokuapp.com/newRegistration', {
+            fetch('http://localhost:3000/newRegistration', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -71,7 +76,12 @@ function RegistrationForm () {
                     mobile: formValues.mobile,
                     email: formValues.email,
                     other_topics: formValues.other_topics,
-                    found_about: formValues.found_about
+                    direct_email: formValues.direct_email,
+                    magazine: formValues.magazine,
+                    web: formValues.web,
+                    mailing: formValues.mailing,
+                    press: formValues.press,
+                    other: formValues.other
                 })
             })
             .then(response =>{
@@ -81,7 +91,13 @@ function RegistrationForm () {
                     setError(true);
                 }
                 return response
-            } )
+            })
+            .then(response => {
+                setIsSubmit(false);
+                setLoading(false);
+                setFormValues(initialValues);
+                console.log(response);
+            })
         }
     }, [formErrors, formValues, isSubmit])
 
@@ -535,9 +551,8 @@ function RegistrationForm () {
                                 <div className="flex items-center gap-x-3">
                                     <input
                                     id="push-direct-email"
-                                    name="found_about"
-                                    type="radio"
-                                    value='direct-email'
+                                    name="direct_email"
+                                    type="checkbox"
                                     className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
                                     />
                                     <label htmlFor="push-direct-email" className="block text-sm font-medium leading-6 text-gray-900">
@@ -547,9 +562,8 @@ function RegistrationForm () {
                                 <div className="flex items-center gap-x-3">
                                     <input
                                     id="push-magazine"
-                                    name="found_about"
-                                    value='magazine'
-                                    type="radio"
+                                    name="magazine"
+                                    type="checkbox"
                                     className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
                                     />
                                     <label htmlFor="push-magazine" className="block text-sm font-medium leading-6 text-gray-900">
@@ -559,9 +573,8 @@ function RegistrationForm () {
                                 <div className="flex items-center gap-x-3">
                                     <input
                                     id="push-website"
-                                    name="found_about"
-                                    value='website'
-                                    type="radio"
+                                    name="web"
+                                    type="checkbox"
                                     className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
                                     />
                                     <label htmlFor="push-website" className="block text-sm font-medium leading-6 text-gray-900">
@@ -571,9 +584,8 @@ function RegistrationForm () {
                                 <div className="flex items-center gap-x-3">
                                     <input
                                     id="push-mailing"
-                                    name="found_about"
-                                    value='mailing'
-                                    type="radio"
+                                    name="mailing"
+                                    type="checkbox"
                                     className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
                                     />
                                     <label htmlFor="push-mailing" className="block text-sm font-medium leading-6 text-gray-900">
@@ -583,9 +595,8 @@ function RegistrationForm () {
                                 <div className="flex items-center gap-x-3">
                                     <input
                                     id="push-press"
-                                    name="found_about"
-                                    type="radio"
-                                    value='press'
+                                    name="press"
+                                    type="checkbox"
                                     className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
                                     />
                                     <label htmlFor="push-press" className="block text-sm font-medium leading-6 text-gray-900">
@@ -595,9 +606,8 @@ function RegistrationForm () {
                                 <div className="flex items-center gap-x-3">
                                     <input
                                     id="push-other"
-                                    name="found_about"
-                                    type="radio"
-                                    value='other'
+                                    name="other"
+                                    type="checkbox"
                                     className="h-4 w-4 border-gray-300 text-principal focus:ring-principal"
                                     />
                                     <label htmlFor="push-other" className="block text-sm font-medium leading-6 text-gray-900">
