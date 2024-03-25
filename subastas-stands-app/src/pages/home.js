@@ -17,7 +17,7 @@ function Home({logged_in, user_id}) {
                 <div className="border-2 p-6 rounded border-principal">
                     <h3 className="font-bold">Workshop Twentyeight Women's Health</h3>
                     <p>
-                        Fecha 10 de abril 2024 a las 08:00 hrs
+                        Fecha 22 de mayo 2024 a las 08:30 hrs
                     </p>
                     <p>
                         Lugar: Museo Soumaya / Auditorio / Blvd. Miguel de Cervantes Saavedra, Granada, Miguel Hidalgo, 11529, Ciudad de México, CDMX
