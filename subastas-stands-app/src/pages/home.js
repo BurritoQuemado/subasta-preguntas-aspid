@@ -10,7 +10,7 @@ function Home({logged_in, user_id}) {
                 <div className="flex align-center justify-center">
                     <img src={LogoAspid} alt="Logo Premios Aspid" className="h-32 md:h-52 w-auto"  />
                 </div>
-                <h2 className="text-2xl lg:text-4xl font-bold">Conferencia 10 de abril "Twentyeight Women's Health"</h2>
+                <h2 className="text-2xl lg:text-4xl font-bold">Conferencia 22 de mayo "Twentyeight Women's Health"</h2>
                 <p className="text-md p-6 font-semibold">
                     PREMIOS ASPID de Publicidad Iberoamericana de Salud y Farmacia 2024, en su XIX edición Auditorio Museo Soumaya - Blvd. Miguel de Cervantes Saavedra, Granada, Miguel Hidalgo, 11529, Ciudad de México, CDMX
                 </p>
