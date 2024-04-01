@@ -9,7 +9,8 @@ import {
   GalleryPage,
   QuizPage,
   PlayersListPage,
-  PaymentPage
+  PaymentPage,
+  RegistrationsListPage
 } from './pages'
 import { Layout } from './components';
 function App () {
@@ -52,7 +53,7 @@ function App () {
         <Route path='/galeria' element={ <GalleryPage /> } />
         <Route path='/cuestionario' element={ <QuizPage user_id={user_id} /> } />
         <Route path='/jugadores' element={ <PlayersListPage /> } />
-
+        <Route path='/registros' element={ <RegistrationsListPage /> } />
       </Routes>
     </Layout>
   );

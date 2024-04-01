@@ -7,3 +7,4 @@ export { default as GalleryPage } from './gallery';
 export { default as QuizPage } from './quiz';
 export { default as PlayersListPage } from './players-list';
 export { default as PaymentPage } from './payment';
+export { default as RegistrationsListPage } from './registrations';
