@@ -28,7 +28,9 @@ function RegistrationForm () {
         web: false,
         mailing: false,
         press: false,
-        other: false
+        press_text: '',
+        other: false,
+        other_text: ''
     }
 
     const [formValues, setFormValues] = useState(initialValues);
@@ -81,7 +83,9 @@ function RegistrationForm () {
                     web: formValues.web,
                     mailing: formValues.mailing,
                     press: formValues.press,
-                    other: formValues.other
+                    press_text: formValues.press_text,
+                    other: formValues.other,
+                    other_text: formValues.other_text,
                 })
             })
             .then(response =>{
@@ -99,7 +103,7 @@ function RegistrationForm () {
                 console.log(response);
             })
         }
-    }, [formErrors, formValues, isSubmit])
+    }, [formErrors, formValues, isSubmit, initialValues])
 
     const validate = (values) => {
         const errors = {};
@@ -547,6 +551,7 @@ function RegistrationForm () {
                                 </label>
                             </div>
                             <fieldset name="found_about" onChange={handleChange}>
+                            <h2 className=" cols-span-6 text-base font-semibold leading-7 text-gray-900">Medio por el cual se enteró del Seminario</h2>
                                 <div className="mt-6 space-y-6">
                                 <div className="flex items-center gap-x-3">
                                     <input
@@ -603,6 +608,17 @@ function RegistrationForm () {
                                         Prensa
                                     </label>
                                 </div>
+                                <div className="lg:col-span-3">
+                                    <input
+                                        type="text"
+                                        name="press_text"
+                                        id="press_text"
+                                        placeholder="Prensa"
+                                        onChange={handleChange}
+                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-principal focus:ring-principal sm:text-sm"
+                                    />
+                                </div>
+                                
                                 <div className="flex items-center gap-x-3">
                                     <input
                                     id="push-other"
@@ -613,6 +629,16 @@ function RegistrationForm () {
                                     <label htmlFor="push-other" className="block text-sm font-medium leading-6 text-gray-900">
                                         Otro
                                     </label>
+                                </div>
+                                <div className="lg:col-span-3">
+                                    <input
+                                        type="text"
+                                        name="other_text"
+                                        id="other_text"
+                                        placeholder="Otro"
+                                        onChange={handleChange}
+                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-principal focus:ring-principal sm:text-sm"
+                                    />
                                 </div>
                                 </div>
                             </fieldset>
