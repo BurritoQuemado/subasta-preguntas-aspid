@@ -103,7 +103,7 @@ function RegistrationForm () {
                 console.log(response);
             })
         }
-    }, [formErrors, formValues, isSubmit, initialValues])
+    }, [formErrors, formValues, isSubmit])
 
     const validate = (values) => {
         const errors = {};
