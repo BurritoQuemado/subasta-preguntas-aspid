@@ -1,5 +1,4 @@
 import React from "react";
-import LogoAspid from "../assets/images/logo-aspid.jpg";
 import { RegistrationForm } from "../components"
 
 function Home({logged_in, user_id}) {
@@ -7,12 +6,9 @@ function Home({logged_in, user_id}) {
     return (
         <div>
             <div className="text-center py-6 px-8">
-                <div className="flex align-center justify-center">
-                    <img src={LogoAspid} alt="Logo Premios Aspid" className="h-32 md:h-52 w-auto"  />
-                </div>
                 <h2 className="text-2xl lg:text-4xl font-bold">Workshop Twentyeight women's health</h2>
                 <p className="text-md p-6 font-semibold">
-                Auditorio Torre Mayor -Av. P.º de la Reforma 505-Piso 51, Cuauhtémoc, 06500 Ciudad de México, CDMX,  Premios Aspid de Publicidad Iberoamericana de Salud y Farmacia 2024, en su XIX Edición
+                Auditorio Torre Mayor -Av. P.º de la Reforma 505-Piso 51, Cuauhtémoc, 06500 Ciudad de México, CDMX.
                 </p>
                 <div className="border-2 p-6 rounded border-principal">
                     <h3 className="font-bold">Workshop Twentyeight Women's Health</h3>
@@ -109,11 +105,6 @@ function Home({logged_in, user_id}) {
                 </p>
                 <p>
                     Eje 3 Norte Calzada San Isidro No. 164 Torre Alcázar Sevilla C Oficina 1305 Col. Industrial San Antonio, Azcapotzalco, Ciudad de México C.P. 02760
-                </p>
-                <p className="text-indigo-600">
-                    <a href="https://www.premiosaspid.mx" target="_blank" rel="noreferrer noopener">
-                        Web: www.premiosaspid.mx
-                    </a>
                 </p>
             </div>
         </div>
